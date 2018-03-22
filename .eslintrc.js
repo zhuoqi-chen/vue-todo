@@ -50,5 +50,6 @@ module.exports = {
     'vue/no-reserved-keys':'off',
     'no-console':'off',
     'no-underscore-dangle':'off',
+    'func-names':'off',
   }
 }
