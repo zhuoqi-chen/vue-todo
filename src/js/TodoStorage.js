@@ -19,6 +19,16 @@ const todoStorage = {
     TODOS.push(todo);
     todoStorage.save(TODOS);
   },
+  modify(todo) {
+    const index = TODOS.findIndex(item => item.uuid === todo.uuid);
+    TODOS[index] = todo;
+    todoStorage.save(TODOS);
+  },
+  remove(todo) {
+    const index = TODOS.findIndex(item => item.uuid === todo.uuid);
+    TODOS.splice(index, 1);
+    todoStorage.save(TODOS);
+  },
   save(todos) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
   },

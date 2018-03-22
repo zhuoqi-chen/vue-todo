@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <todo-add @add="onAdd"></todo-add>
-    <todo-item
-      v-for="todo in todos"
-      @editDone="onEditDone"
-      @delete="onDelete"
-      :key="todo.uuid"></todo-item>
+  <div class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+    <todo-add
+      class="new-todo"
+      @add="onAdd"></todo-add>
+    </header>
+    <ul class="todo-list">
+        <todo-item
+          class="todo"
+            v-for="todo in todos"
+            :todo="todo"
+            @doneEdit="onDoneEdit"
+            @remove="onRemove"
+            :key="todo.uuid"></todo-item>
+    </ul>
   </div>
 </template>
 
@@ -28,6 +37,12 @@ export default {
   methods: {
     onAdd(todo) {
       TodoStorage.add(todo);
+    },
+    onDoneEdit(todo) {
+      TodoStorage.modify(todo);
+    },
+    onRemove(todo) {
+      TodoStorage.remove(todo);
     },
   },
 };
