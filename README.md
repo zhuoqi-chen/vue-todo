@@ -1,6 +1,16 @@
+<p align="center">
+  <a href="https://circleci.com/gh/zhuoqi-chen/vue-todo/tree/master"><img src="https://img.shields.io/circleci/project/vuejs/vue/dev.svg" alt="Build Status"></a>
+  <a href="https://circleci.com/gh/zhuoqi-chen/vue-todo/tree/master"><img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status"></a>
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/zhuoqi-chen/vue-todo/master/static/screenshot.png" alt="Coverage Status"
+</p>
+
 # vue-todo
-- an app of todo list develop by TDD
-> A Vue.js project
+> an app of todo list develop by TDD
+
+## Quick viewing
+https://zhuoqi-chen.github.io/vue-todo/dist/
 
 ## Build Setup
 
